@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent width calculations */
+  font-family: 'Lato', sans-serif;
+}
+/* Top bar that stays fixed */
+.top-bar {
+	display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #6DB993;
+  color: black;
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); */
+  z-index: 1000; /* Ensures it stays above other content */
+}
+.top-bar-img {
+	margin-top: 5px;
+	margin-left: 10px;
+	display: block;
+	width: 30px;  /* Make the image responsive */
+  height: 30px; /* Keeps the correct aspect ratio */
+}
+.top-bar-title {
+	margin-top: 0px;
+	margin-left: 5px;
+	color: black;
+	text-align: left;
+  font-size: 20px;
+	font-weight: bold;
+	text-align: left;
+  line-height: 40px;
+	font-family: 'Amazon Ember', Arial, sans-serif;
+}
+/*  end top bar*/
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; /* Aligns both divs at the top */
+  width: 100vw; /* Takes full width */
+  padding: 0 10px; /* Adds 10px space on both sides */
+  box-sizing: border-box;
+  gap: 15px; /* Adds space between elements */
+}
+.container-images {
+  justify-content: flex-start;
+  align-items: flex-start; /* Aligns both divs at the top */
+  width: 40vw; /* Takes full width */
+  padding: 0 10px; /* Adds 10px space on both sides */
+  box-sizing: border-box;
+  gap: 10px; /* Adds space between elements */
+	margin-top: 10px;
+}
+.scroll-container-thumbs {
+	display: flex;
+  width: 60px;
+  height: 400px;
+  margin-top: 10px;
+	gap: 10px;
+}
+/* Style the images inside the grid */
+.scroll-container-thumbs img {
+  height: 40px;
+  width: 60px;
+  border-radius: 6px;
+}
+.scroll-container {
+  border: 2px solid #D3D3D3; /* Adjust thickness and color */
+  overflow: auto;
+  white-space: nowrap;
+  margin-top: 10px;
+  padding: 4px;
+  width: 40vw;
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+  border-radius: 10px;
+  box-sizing: border-box;
+  left: 0px;
+}
+.scroll-container img {
+  padding: 8px;
+  width: 35vw;
+  height: 400px;
+  border-radius: 14px;
+}
+
+.service-description{
+	width: calc(40vw - 40px);
+  border-radius: 20px;
+  box-sizing: border-box;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.service-description h1 {
+	font-size: 2rem;
+	font-weight: 900; /* Bold */
+	font-style: normal;
+  margin-top: 10px;
+}
+.service-description p {
+	font-size: 0.9rem; /* 14px */
+	line-height: 1.5;    /* Adjust spacing for readability */
+	font-weight: 400; /* regular */
+	font-style: normal;
+  margin-top: 0px;
+}
+.part-container {
+	text-align: left;
+  padding: 8px;
+  width: 60vw;
+	display: flex; /* Enables flexbox */
+  gap: 10px; /* Adds spacing between items */
+  align-items: left; /* Aligns items vertically */
+}
+.part {
+	border: 2px solid #D3D3D3; /* Adjust thickness and color */
+	border-radius: 10px;
+  text-align: left;
+	padding: 5px; /* Adds spacing inside each part */
+}
+.part h3 {
+	font-size: 1rem;
+  margin: 0px 4px 2px; /* Adds spacing above and below the heading */
+}
+.part p {
+  margin: 4px 4px 0; /* Adds spacing above and below the paragraph */
+	font-size: 0.8rem;
+	color: #808080;
+}
+.part img {
+  padding: 4px;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+}
+.arrow img{
+	margin: 30px 0;
+	padding: 10px;
+	width: 30px;
+  height: 30px;
+}
+.buttons {
+	border: 2px solid #D3D3D3; /* Adjust thickness and color */
+	border-radius: 10px;
+	padding: 4px;
+	margin-top: 20px;
+}
+.custom-button1{
+	display: block; /* Makes each button take its own line */
+  margin: 10px 0;
+
+	background-color: #FFA41C;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.custom-button1:hover {
+  background-color: #F08804;
+}
+.custom-button1:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+.custom-button2{
+	background-color: #FFCC80;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+	margin: 0px 0px 20px;
+}
+.custom-button2:hover {
+  background-color: #FFC570;
+}
+.custom-button2:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}

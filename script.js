@@ -46,10 +46,15 @@ makeAppointment.addEventListener('click', async function() {
 // Apointment
 //
 //
-function toggleDropdown() {
-  document.getElementById("dropdown-menu").classList.toggle("show");
-}
 
+
+
+
+
+
+function toggleDropdown() {
+  document.getElementById("dropdown-menu-years").classList.toggle("show");
+}
 // Close dropdown if clicked outside
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -62,7 +67,6 @@ window.onclick = function(event) {
     }
   }
 }
-
 fetch('csv/years.csv')
   .then(response => response.text())
   .then(data => {
@@ -70,10 +74,19 @@ fetch('csv/years.csv')
     const dropdown = document.getElementById('dropdown-menu-years');
     dropdown.innerHTML = ''; // clear existing items
 
-    lines.forEach(make => {
+    lines.forEach(year => {
       const a = document.createElement('a');
       a.href = '#';
-      a.textContent = make;
+      a.textContent = year;
+
+      // Add event listener to each item
+      a.addEventListener('click', function() {
+        // Update the button text
+        document.querySelector('.btn-text').textContent = year;
+        // Hide the dropdown after selecting a year
+        dropdown.classList.remove('show');
+      });
+
       dropdown.appendChild(a);
     });
   });
